@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contact & Recovery</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; margin: 0; padding: 20px; color: #333; line-height: 1.6; }
+        .container { max-width: 400px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        header { border-bottom: 2px solid #e74c3c; padding-bottom: 15px; margin-bottom: 20px; }
+        h1 { font-size: 1.2rem; color: #e74c3c; margin: 0 0 10px 0; }
+        p.warning { font-size: 0.85rem; font-weight: bold; margin: 0; }
+        .qr-section { text-align: center; margin: 20px 0; }
+        .qr-section img { width: 100%; max-width: 250px; border: 1px solid #ddd; border-radius: 8px; }
+        .info-box { background: #f9f9f9; border: 1px solid #eee; padding: 15px; border-radius: 8px; }
+        .field { margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .label { font-size: 0.75rem; color: #777; display: block; }
+        .value { font-family: monospace; font-size: 1.1rem; word-break: break-all; }
+        footer { text-align: center; font-size: 0.7rem; color: #999; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>【緊急連絡先】</h1>
+            <p class="warning">
+                アカウント復旧が必要な場合や、メインアカウント保持者がオフラインでシェルターが危険な状態にあるなど、**真に緊急事態の場合**はこちらへ連絡してください。
+            </p>
+        </header>
+
+        <div class="qr-section">
+            <img src="line_qr.png" alt="Emergency QR Code">
+            <p style="font-size: 0.8rem; color: #666;">QRコードをスキャンして連絡</p>
+        </div>
+
+        <div class="info-box">
+            <div class="field">
+                <span class="label">ID名</span>
+                <span class="value">Emergency_User_01</span>
+            </div>
+            <div class="field">
+                <span class="label">パスワード</span>
+                <span class="value">******** (Security Protected)</span>
+            </div>
+        </div>
+
+        <footer>&copy; 2026 Emergency Support System</footer>
+    </div>
+</body>
+</html>
