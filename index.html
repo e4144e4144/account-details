@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Recovery Portal</title>
     <style>
-        body { font-family: -apple-system, sans-serif; background: #f0f2f5; margin: 0; padding: 10px; color: #1c1e21; }
+        body { font-family: -apple-system, sans-serif; background: #f0f2f5; margin: 0; padding: 10px; color: #1c1e21; line-height: 1.4; }
         .container { max-width: 500px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-top: 8px solid #d93025; }
         header { text-align: center; margin-bottom: 20px; }
         h1 { font-size: 1.2rem; color: #d93025; margin: 0; text-transform: uppercase; }
@@ -13,11 +13,13 @@
         .qr-section { text-align: center; margin: 20px 0; border-bottom: 1px solid #eee; padding-bottom: 20px; }
         .qr-section img { width: 100%; max-width: 220px; border-radius: 10px; border: 1px solid #ddd; }
         .login-note { background: #fffbe6; border-left: 4px solid #faad14; padding: 10px; font-size: 0.8rem; margin-bottom: 20px; border-radius: 4px; }
-        .account-list { display: grid; grid-template-columns: 1fr; gap: 10px; }
-        .account-item { background: #f8f9fa; padding: 10px; border-radius: 8px; border: 1px solid #eee; font-size: 0.85rem; position: relative; }
-        .num { position: absolute; right: 10px; top: 5px; font-size: 0.6rem; color: #ccc; }
-        .label { font-weight: bold; color: #65676b; width: 40px; display: inline-block; font-size: 0.7rem; }
+        .account-list { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        .account-item { background: #f8f9fa; padding: 12px; border-radius: 8px; border: 1px solid #eee; font-size: 0.85rem; position: relative; }
+        .num { position: absolute; right: 10px; top: 8px; font-size: 0.7rem; color: #bbb; font-weight: bold; }
+        .row { margin-bottom: 4px; display: flex; align-items: baseline; }
+        .label { font-weight: bold; color: #65676b; width: 50px; flex-shrink: 0; font-size: 0.7rem; }
         .value { font-family: monospace; color: #000; word-break: break-all; }
+        .memo-row { margin-top: 6px; padding-top: 6px; border-top: 1px dashed #ddd; color: #d93025; font-style: italic; font-size: 0.8rem; }
         footer { text-align: center; font-size: 0.7rem; color: #999; margin-top: 30px; padding-bottom: 20px; }
     </style>
 </head>
@@ -26,104 +28,70 @@
         <header>
             <h1>Emergency Access Portal</h1>
             <div class="warning">
-                ONLY for account recovery or if the holder is offline and the shelter is in a DANGEROUS state.
+                ONLY for recovery or if the holder is offline and the shelter is in a DANGEROUS state.
             </div>
         </header>
 
         <div class="qr-section">
             <img src="line_qr.png" alt="Emergency QR">
-            <p style="font-size: 0.75rem; color: #666; margin-top: 5px;">Scan to contact via Messenger/LINE</p>
+            <p style="font-size: 0.75rem; color: #666; margin-top: 5px;">Scan to contact for emergency</p>
         </div>
 
         <div class="login-note">
-            <strong>IMPORTANT:</strong> Gmail accounts are inactive. <br>
-            Please use <strong>IGG Login</strong> for all accounts below.
+            <strong>NOTICE:</strong> Gmail accounts are inactive. <br>
+            Please use <strong>IGG Login</strong> for all entries below.
         </div>
 
         <div class="account-list">
             <div class="account-item">
-                <span class="num">01</span>
-                <div><span class="label">ID:</span> <span class="value">soslegacy002@gmail.com</span></div>
-                <div><span class="label">PW:</span> <span class="value">002soslegacy</span></div>
+                <span class="num">#01</span>
+                <div class="row"><span class="label">ID:</span> <span class="value">ID_HERE</span></div>
+                <div class="row"><span class="label">PW:</span> <span class="value">PASS_HERE</span></div>
+                <div class="memo-row">MEMO: MEMO_HERE</div>
             </div>
-            <div class="account-item">
-                <span class="num">02</span>
-                <div><span class="label">ID:</span> <span class="value">soslegacy003@gmail.com</span></div>
-                <div><span class="label">PW:</span> <span class="value">003soslegacy</span></div>
-            </div>
-            <div class="account-item">
-                <span class="num">03</span>
-                <div><span class="label">ID:</span> <span class="value">soslegacy006@gmail.com</span></div>
-                <div><span class="label">PW:</span> <span class="value">006soslegacyE</span></div>
-            </div>
-            <div class="account-item">
-                <span class="num">04</span>
-                <div><span class="label">ID:</span> <span class="value">ID_HERE</span></div>
-                <div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div>
-            </div>
-            <div class="account-item">
-                <span class="num">05</span>
-                <div><span class="label">ID:</span> <span class="value">ID_HERE</span></div>
-                <div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div>
-            </div>
-            <div class="account-item">
-                <span class="num">06</span>
-                <div><span class="label">ID:</span> <span class="value">ID_HERE</span></div>
-                <div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div>
-            </div>
-            <div class="account-item">
-                <span class="num">07</span>
-                <div><span class="label">ID:</span> <span class="value">ID_HERE</span></div>
-                <div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div>
-            </div>
-            <div class="account-item">
-                <span class="num">08</span>
-                <div><span class="label">ID:</span> <span class="value">ID_HERE</span></div>
-                <div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div>
-            </div>
-            <div class="account-item">
-                <span class="num">09</span>
-                <div><span class="label">ID:</span> <span class="value">ID_HERE</span></div>
-                <div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div>
-            </div>
-            <div class="account-item">
-                <span class="num">10</span>
-                <div><span class="label">ID:</span> <span class="value">ID_HERE</span></div>
-                <div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div>
-            </div>
-            <div class="account-item"><span class="num">11</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">12</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">13</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">14</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">15</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">16</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">17</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">18</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">19</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">20</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">21</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">22</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">23</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">24</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">25</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">26</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">27</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">28</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">29</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">30</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">31</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">32</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">33</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">34</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">35</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">36</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">37</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">38</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">39</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-            <div class="account-item"><span class="num">40</span><div><span class="label">ID:</span> <span class="value">ID_HERE</span></div><div><span class="label">PW:</span> <span class="value">PASS_HERE</span></div></div>
-        </div>
 
-        <footer>&copy; 2026 Emergency Support Network</footer>
-    </div>
-</body>
-</html>
+            <div class="account-item">
+                <span class="num">#02</span>
+                <div class="row"><span class="label">ID:</span> <span class="value">ID_HERE</span></div>
+                <div class="row"><span class="label">PW:</span> <span class="value">PASS_HERE</span></div>
+                <div class="memo-row">MEMO: MEMO_HERE</div>
+            </div>
+
+            <div class="account-item">
+                <span class="num">#03</span>
+                <div class="row"><span class="label">ID:</span> <span class="value">ID_HERE</span></div>
+                <div class="row"><span class="label">PW:</span> <span class="value">PASS_HERE</span></div>
+                <div class="memo-row">MEMO: MEMO_HERE</div>
+            </div>
+
+            <div class="account-item"><span class="num">#04</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#05</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#06</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#07</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#08</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#09</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#10</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            
+            <div class="account-item"><span class="num">#11</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#12</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#13</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#14</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#15</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#16</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#17</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#18</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#19</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#20</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#21</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#22</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#23</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#24</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#25</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#26</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#27</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#28</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#29</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#30</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#31</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#32</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:</span><span class="value">PASS_HERE</span></div><div class="memo-row">MEMO: MEMO_HERE</div></div>
+            <div class="account-item"><span class="num">#33</span><div class="row"><span class="label">ID:</span><span class="value">ID_HERE</span></div><div class="row"><span class="label">PW:
